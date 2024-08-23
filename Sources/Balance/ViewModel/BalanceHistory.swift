@@ -89,3 +89,9 @@ struct Balance {
     var currentAmount: Double
     var month: String
 }
+
+extension Double {
+    func currencyFormat() -> String {
+        self.formatted(.currency(code: "USD"))
+    }
+}

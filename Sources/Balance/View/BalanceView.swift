@@ -21,8 +21,8 @@ struct BalanceView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                BalanceCardView(title: .init(title: "Mi Balance"),
-                                subtitle: .init(title: "$\(balance.currentAmount)",
+                BalanceCardView(title: .init(title: "Mi Balance", sizeTitle: .large),
+                                subtitle: .init(title: balance.currentAmount.currencyFormat(),
                                                 sizeTitle: .xxLargePlus2,
                                                 isBold: true),
                                 principalButtonTitle: .init(
@@ -49,7 +49,7 @@ struct BalanceView: View {
                 .background(Color(UIColor.systemGray6))
                 List {
                     ForEach(historyMonthBalance, id: \.self) { historyBalance in
-                        CellInfoView(icon: historyBalance.iconName, titleConfiguration: .init(title: historyBalance.category.rawValue, sizeTitle: .large, isBold: true), subtitleConfiguration: .init(title: historyBalance.subcategory), thirdTitleConfiguration: .init(title: "$\(historyBalance.amount)", colorTitle: historyBalance.colorAmount, isBold: true))
+                        CellInfoView(icon: historyBalance.iconName, titleConfiguration: .init(title: historyBalance.category.rawValue, sizeTitle: .large, isBold: true), subtitleConfiguration: .init(title: historyBalance.subcategory), thirdTitleConfiguration: .init(title: historyBalance.amount.currencyFormat(), colorTitle: historyBalance.colorAmount, isBold: true))
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -59,8 +59,6 @@ struct BalanceView: View {
         }
     }
 }
-
-//#CECECE
 
 #Preview {
     BalanceView()

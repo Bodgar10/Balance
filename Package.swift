@@ -14,7 +14,7 @@ let package = Package(
             name: "Balance",
             targets: ["Balance"]),
     ],
-    dependencies: [.package(url: "https://github.com/Bodgar10/DesignSystem.git", .upToNextMajor(from: "1.0.2"))],
+    dependencies: [.package(url: "https://github.com/Bodgar10/DesignSystem.git", .upToNextMajor(from: "1.0.3"))],
     targets: [
         .target(
             name: "Balance", dependencies: [.product(name: "DesignSystem", package: "DesignSystem")]),
