@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4ADFB1F84242528A26C18EC8 /* BalanceDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6E208C28994A53B11EEBF /* BalanceDemo.swift */; };
 		4F4A5A29811D38E1C5B020C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32B1CA2FCDB69764410407 /* ContentView.swift */; };
+		8752B3E72C99E46E0095FBCB /* Balance in Frameworks */ = {isa = PBXBuildFile; productRef = 8752B3E62C99E46E0095FBCB /* Balance */; };
 		A51F99B56087FD093C413C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA30A58E9B8AD0981B9E299 /* Assets.xcassets */; };
 		DFD9AD629B4D68D32BF86402 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EFA9EE7BE15906FE2A73C7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,11 +17,22 @@
 /* Begin PBXFileReference section */
 		14FB727650C75B442CE97EDE /* BalanceDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BalanceDemo.entitlements; sourceTree = "<group>"; };
 		1CA6E208C28994A53B11EEBF /* BalanceDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceDemo.swift; sourceTree = "<group>"; };
-		326FB9D7436CE1AC66193BFB /* BalanceDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BalanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		326FB9D7436CE1AC66193BFB /* BalanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA30A58E9B8AD0981B9E299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F32B1CA2FCDB69764410407 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5EFA9EE7BE15906FE2A73C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8752B3DF2C99DFAA0095FBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8752B3E72C99E46E0095FBCB /* Balance in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1D31132B2CCDCE31AF778892 /* Resources */ = {
@@ -36,6 +48,7 @@
 			children = (
 				6690A0A0576F8B88A35FB755 /* Balance */,
 				A55F57BBE08A0269EDCFF09E /* Products */,
+				8752B3E02C99DFCA0095FBCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,7 +61,6 @@
 				F794EE0827C0B9AD80FCB94B /* Preview Content */,
 				1D31132B2CCDCE31AF778892 /* Resources */,
 			);
-			name = BalanceDemo;
 			path = BalanceDemo;
 			sourceTree = "<group>";
 		};
@@ -59,6 +71,13 @@
 			);
 			name = Balance;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8752B3E02C99DFCA0095FBCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A55F57BBE08A0269EDCFF09E /* Products */ = {
@@ -87,12 +106,16 @@
 				AAE8D3673EA6C6C8E10988B0 /* Sources */,
 				A9A43FA3F910EBC7F074FE88 /* Run Script */,
 				14C4A41F61F9C76C02FB6536 /* Resources */,
+				8752B3DF2C99DFAA0095FBCB /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BalanceDemo;
+			packageProductDependencies = (
+				8752B3E62C99E46E0095FBCB /* Balance */,
+			);
 			productName = BalanceDemo;
 			productReference = 326FB9D7436CE1AC66193BFB /* BalanceDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -104,9 +127,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
+				LastUpgradeCheck = 1520;
 			};
 			buildConfigurationList = 55DCC4B275AC2585B4D93FB3 /* Build configuration list for PBXProject "BalanceDemo" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -117,6 +138,9 @@
 				en,
 			);
 			mainGroup = 53D7E4D16AB544A1F041F8A3;
+			packageReferences = (
+				8752B3E52C99E46E0095FBCB /* XCLocalSwiftPackageReference ".." */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -210,6 +234,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -270,6 +295,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -303,7 +329,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +347,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +382,20 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		8752B3E52C99E46E0095FBCB /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8752B3E62C99E46E0095FBCB /* Balance */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Balance;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDC73833E1A87A1F7FBCFE3E /* Project object */;
 }

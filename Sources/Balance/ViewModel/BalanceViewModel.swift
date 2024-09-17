@@ -23,7 +23,7 @@ public class BalanceViewModel {
     let secondButtonTitle = "AGREGAR GASTO"
     
     let errorTitle = "No tienes lana 😢"
-    let errorSubtitle = "Aún no tienes un movimiento registrado este mes, puedes añadirlo dando click en AGREGAR INGRESO o AGREGAR GASTO."
+    let errorSubtitle = "Aún no tienes un movimiento registrado este mes, puedes añadirlo dando click en \"AGREGAR INGRESO\" o \"AGREGAR GASTO\"."
     
     public init() {
         getHistoryBalance()

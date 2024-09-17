@@ -13,9 +13,10 @@ import Common
 
 public class BalanceCoordinator {
     
-    @Environment(\.modelContext) var modelContext
+    private var modelContext: ModelContext
     
-    public init() {
+    public init(modelContext: ModelContext) {
+        self.modelContext = modelContext
         registerDependencies()
     }
     
