@@ -13,7 +13,7 @@ import Common
 public class BalanceViewModel: ObservableObject {
     
     @Dependency var transactionService: TransactionService
-    @Dependency var navigationService: NavigationService
+    @Dependency var navigationService: any NavigationService
 
     @Published var historyMonthBalance: [CashSwitchboard.Transaction] = []
     @Published var balance: Balance = .init(currentAmount: 0.0, month: "")

@@ -93,13 +93,13 @@ final class BalanceViewModelTests: XCTestCase {
     }
     
     private func registerMockDependencies() {
-        ServiceLocator.register(NavigationService.self, factory: self.mockNavigationService)
+        ServiceLocator.register((any NavigationService).self, factory: self.mockNavigationService)
         
         ServiceLocator.register(TransactionService.self, factory: MockTransactionService())
     }
     
     override func tearDown() {
-        ServiceLocator.remove(NavigationService.self)
+        ServiceLocator.remove((any NavigationService).self)
         container = nil
         super.tearDown()
     }
@@ -107,6 +107,16 @@ final class BalanceViewModelTests: XCTestCase {
 }
 
 final class MockNavigationService: NavigationService {
+    var navigationState = NavigationState()
+    
+    func presentModal(to destination: Common.Destination) {
+        
+    }
+    
+    func dismissModal() {
+        
+    }
+    
     
     var id =  UUID()
     
