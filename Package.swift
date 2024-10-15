@@ -15,8 +15,8 @@ let package = Package(
             targets: ["Balance"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Bodgar10/DesignSystem.git", .upToNextMajor(from: "1.0.4")),
-        .package(url: "https://github.com/Bodgar10/Common.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/Bodgar10/DesignSystem.git", .upToNextMajor(from: "1.0.5")),
+        .package(url: "https://github.com/Bodgar10/Common.git", .upToNextMajor(from: "1.0.1")),
         .package(url: "https://github.com/Bodgar10/CashSwitchboard.git", .upToNextMajor(from: "1.0.3"))
     ],
     targets: [

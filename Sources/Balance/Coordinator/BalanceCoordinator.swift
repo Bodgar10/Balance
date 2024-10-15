@@ -17,6 +17,7 @@ public class BalanceCoordinator {
     
     public init(modelContext: ModelContext) {
         self.modelContext = modelContext
+        addSamples(with: modelContext)
         registerDependencies()
     }
     
@@ -26,5 +27,16 @@ public class BalanceCoordinator {
     
     private func registerDependencies() {
         ServiceLocator.register(TransactionService.self, factory: SwiftDataTransactionService(modelContext: self.modelContext))
+    }
+    
+    func addSamples(with modelContext: ModelContext) {
+        let first = Transaction(category: .cash, subcategory: "Dinero efectivo", amount: 200, date: Date())
+        let second = Transaction(category: .cash, subcategory: "Dinero efectivo", amount: 300, date: Date())
+        let third = Transaction(category: .cash, subcategory: "Dinero efectivo", amount: 400, date: Date())
+        
+        modelContext.insert(first)
+        modelContext.insert(second)
+        modelContext.insert(third)
+        try? modelContext.save()
     }
 }

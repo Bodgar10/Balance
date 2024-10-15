@@ -61,13 +61,9 @@ struct BalanceView: View {
                         )
                         Spacer()
                     } else {
-                        List {
-                            ForEach(viewModel.historyMonthBalance, id: \.self) { historyBalance in
-                                CellInfoView(icon: historyBalance.iconName, titleConfiguration: .init(title: historyBalance.category.rawValue, sizeTitle: .large, isBold: true), subtitleConfiguration: .init(title: historyBalance.subcategory), thirdTitleConfiguration: .init(title: historyBalance.amount.currencyFormat(), colorTitle: historyBalance.colorAmount, isBold: true))
-                            }
+                        ForEach(viewModel.historyMonthBalance, id: \.self) { historyBalance in
+                            CellInfoView(icon: historyBalance.iconName, titleConfiguration: .init(title: historyBalance.category.rawValue, sizeTitle: .large, isBold: true), subtitleConfiguration: .init(title: historyBalance.subcategory), thirdTitleConfiguration: .init(title: historyBalance.amount.currencyFormat(), colorTitle: historyBalance.colorAmount, isBold: true))
                         }
-                        .listStyle(PlainListStyle())
-                        .scrollContentBackground(.hidden)
                     }
                 }
                 .navigationTitle("Controla tu Lana")

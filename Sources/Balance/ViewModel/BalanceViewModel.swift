@@ -10,7 +10,7 @@ import SwiftUI
 import CashSwitchboard
 import Common
 
-public class BalanceViewModel {
+public class BalanceViewModel: ObservableObject {
     
     @Dependency var transactionService: TransactionService
     @Dependency var navigationService: NavigationService
